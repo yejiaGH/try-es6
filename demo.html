@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ES6 准备</title>
+	<script src="node_modules/babel/dist/browser.js"></script>
+	<script type="text/babel">
+		// let name='leo';
+		// console.log(name);
+		class User{
+			constructor(name){
+				this.name = name;
+			}
+
+			changeName(name){
+				this.name = name;
+			}
+		}
+
+		class Manager extends User{
+			constructor(name,password){
+				super(name);
+
+				this.password = password;
+			}
+		}
+
+		let manager = new Manager('leo','123456');
+
+		console.log(manager);
+		manager.changeName('alice');
+		console.log(manager);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
